@@ -1,18 +1,31 @@
+class Product {
+  title = 'DEFAULT';
+  imageUrl;
+  description;
+  price;
+
+  constructor(title, image, desc, price) {
+    this.title = title;
+    this.imageUrl = image;
+    this.description = desc;
+    this.price = price;
+  }
+}
+
 const productList = {
   products: [
-    {
-      title: 'A Pillow',
-      imageUrl:
-        'https://media.4rgos.it/i/Argos/8374831_R_Z002A?w=750&h=440&qlt=70',
-      price: 19.99,
-      description: 'A soft pillow'
-    },
-    {
-      title: 'A Carpet',
-      imageUrl: 'https://products.empiretoday.com/img/8598.jpg',
-      price: 89.99,
-      description: 'A carpet which you might like – or not.'
-    }
+    new Product(
+      'A Pillow',
+      'https://media.4rgos.it/i/Argos/8374831_R_Z002A?w=750&h=440&qlt=70',
+      'A soft pillow',
+      19.99
+    ),
+    new Product(
+      'A Carpet',
+      'https://products.empiretoday.com/img/8598.jpg',
+      'A carpet which you might like – or not.',
+      89.99
+    )
   ],
   render() {
     const renderHook = document.getElementById('app');
